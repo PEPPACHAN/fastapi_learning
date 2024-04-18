@@ -1,0 +1,12 @@
+version: '1.0'
+
+services:
+  fastapi_pet:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: fastapi_pet
+    restart: always
+    command: uvicorn main:app --reload
+    volumes:
+      - /Users/peppachan/Desktop/volumes/
